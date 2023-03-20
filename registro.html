@@ -67,8 +67,12 @@
                                 name="phoneNumber"
                                 id="phoneNumber"
                                 class="input"
-                                type="number"
+                                type="text"
                                 placeholder="Número telefónico"
+                                minlength="10"
+                                maxlength="10"
+                                pattern="\d{10}"
+                                required
                                 data-type="phoneNumber" />
                             <label class="input-label" for="phoneNumber">Número telefónico</label>
                             <span class="input-message-error">Este campo no es valido</span>
