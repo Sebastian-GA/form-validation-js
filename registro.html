@@ -82,23 +82,47 @@
                     <fieldset>
                         <legend class="form__label">Dirección</legend>
                         <div class="input-container">
-                            <input name="cep" id="cep" class="input" type="text" placeholder="CEP" data-type="address" />
+                            <input
+                                name="cep"
+                                id="cep"
+                                class="input"
+                                type="text"
+                                placeholder="CEP"
+                                pattern="[\s\S]{10,40}"
+                                required
+                                data-type="address" />
                             <label class="input-label" for="cep">Dirección completa</label>
                             <span class="input-message-error">Este campo no es valido</span>
                         </div>
                         <div class="input-container">
-                            <input name="city" id="city" class="input" type="text" placeholder="Ciudad" data-type="city" />
+                            <input
+                                name="city"
+                                id="city"
+                                class="input"
+                                type="text"
+                                placeholder="Ciudad"
+                                pattern="[\s\S]{3,20}"
+                                required
+                                data-type="city" />
                             <label class="input-label" for="city">Ciudad</label>
                             <span class="input-message-error">Este campo no es valido</span>
                         </div>
                         <div class="input-container">
-                            <input name="state" id="state" class="input" type="text" placeholder="Estado" data-type="state" />
+                            <input
+                                name="state"
+                                id="state"
+                                class="input"
+                                type="text"
+                                placeholder="Estado"
+                                pattern="[\s\S]{3,20}"
+                                required
+                                data-type="state" />
                             <label class="input-label" for="state">Estado</label>
                             <span class="input-message-error">Este campo no es valido</span>
                         </div>
                     </fieldset>
 
-                    <button class="button">Registrar</button>
+                    <button title="submit" id="submit" class="button" type="submit">Registrar</button>
                 </form>
             </section>
 

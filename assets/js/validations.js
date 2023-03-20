@@ -5,11 +5,11 @@ export function validate(input) {
     if (!(validationFunctions[inputType] === undefined)) {
         validationFunctions[inputType](input);
     }
-    
+
     // If input not valid then add class "input-container--invalid"
     if (!input.validity.valid) {
         input.parentElement.classList.add("input-container--invalid");
-        
+
         // If exist a custom validation error message for this input type
         if (!(validationErrors[inputType] === undefined)) {
             // For each error type for this input type
@@ -50,6 +50,18 @@ const validationErrors = {
     phoneNumber: {
         valueMissing: "Debes ingresar un número de teléfono",
         patternMismatch: "Debes ingresar un número de teléfono válido",
+    },
+    address: {
+        valueMissing: "Debes ingresar una dirección",
+        patternMismatch: "La dirección debe tener entre 10 y 40 caractéres"
+    },
+    city: {
+        valueMissing: "Debes ingresar una ciudad",
+        patternMismatch: "La ciudad debe tener entre 3 y 20 caractéres"
+    },
+    state: {
+        valueMissing: "Debes ingresar un estado",
+        patternMismatch: "El estado debe tener entre 3 y 20 caractéres"
     },
 };
 
