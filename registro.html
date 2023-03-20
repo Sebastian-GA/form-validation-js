@@ -59,7 +59,7 @@
                     <fieldset>
                         <legend class="form__label">Información personal</legend>
                         <div class="input-container">
-                            <input name="birth" id="birth" class="input" type="text" placeholder="Fecha de nacimento" />
+                            <input name="birth" id="birth" class="input" type="date" placeholder="Fecha de nacimento" required data-type="birth" />
                             <label class="input-label" for="birth">Fecha de nacimiento</label>
                             <span class="input-message-error">Este campo no es valido</span>
                         </div>
@@ -92,6 +92,8 @@
                     <button class="button">Registrar</button>
                 </form>
             </section>
+
+            <script type="module" src="assets/js/app.js"></script>
         </main>
     </body>
 </html>
